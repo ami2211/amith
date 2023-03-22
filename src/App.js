@@ -1,12 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
-import Validition1 from './components/Validition1';
+
+import Addstudents from './components/Addstudents';
+import Read from './components/Read';
+import Homee from './components/Homee';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 function App() {
   return (
     <div className="App">
-      <Validition1 />
+      <BrowserRouter>
+      <Homee/>
+    <Routes>
+        <Route path='/' element={<Homee/>} />
+        <Route path='/addstudents' element={<Addstudents/>} />
+        <Route path='/read' element={<Read/>}/>
+      </Routes>      
+      </BrowserRouter>
+      
     </div>
   );
 }
